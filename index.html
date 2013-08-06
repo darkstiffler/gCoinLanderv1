@@ -3,16 +3,26 @@
 <head>
 	<title>{title here}</title>
 	<!-- loads jquery into page! -->
+	<!-- loads scripts into page -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
-		
-		$(document).ready(function(){	
-				
-				// jquery goes here 
-		
+	$(document).ready(function(){	
+		console.log('-JQuery Loaded!');
+
+		alert("enjoi  yerr new template \nplease remember to erase all my filler text!");
+		console.log('user clicked OK!');
+
+		$('#button').click(function(){
+			console.log('clicked!');
+			return false;  
+			// return false so the page does not resubmit.
+			// make sure to redo this code block upon launch.
 		});
+
+	});
 	</script>
-	
+
+	<!--  inline CSS3 -->
 	<style>
 	@import url(http://fonts.googleapis.com/css?family=Fauna+One);
 
@@ -39,6 +49,18 @@
 			width: 960px;
 			height: auto;
 		}
+		#button {
+			position: relative;
+			left: 160px;
+			padding: 20px;
+			background-color: #C5C74A;
+			text-align: center;
+			border: 1px #000 solid;
+			box-shadow: 3px 3px 9px #000;
+			text-decoration: none;
+			border-radius: 7px;
+			font-size: 22px;
+		}
 		#mainBox {
 			font-family: "Fauna One", serif, sans-serif;
 			font-size: 23px;
@@ -52,9 +74,23 @@
 			top: 170px;
 			margin: 0 auto;
 		}
+		#README {
+			color: white;
+			font-size: 17px;
+		}
 	</style>
 </head>
 <body>
+	<div id="README">
+		THIS IS THE LANDER PAGE, <br>
+		THERE IS A PROGRAMMABLE BUTTON <br>
+		YOU CAN LINK TO YOUR SERVER INDEX <br>
+		OF EVERYTHING YOU WISH TO DISPLAY <br>
+		ON THE SERVER! <br><br>
+
+		BE SURE TO ERASE THIS BEFORE LAUNCH!
+	</div>
+	
 	<div id="container">
 		<div id="mainBox">
 			<h2>{Put your headder text here :P}</h2>
@@ -62,6 +98,9 @@
 			<div id="mainRight">
 				<h2>{More text areas}</h2>
 				<h3>{More text areas}</h3>
+			</div>
+			<div id="mainButton">
+				<a id="button" href="#">My Files</a>
 			</div>
 			<div id="mainFooter">
 				<p>&copy; 2013 {Your Name (footer info)}</p>
